@@ -1,0 +1,69 @@
+name: Daily README Update
+
+on:
+  schedule:
+    - cron: '0 2 * * *'  # Runs at 3 AM Amsterdam time (2 AM UTC)
+  workflow_dispatch:      # Allows manual trigger
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      
+      - name: Update README
+        run: |
+          # Get current date
+          DATE=$(date '+%Y-%m-%d %H:%M:%S UTC')
+          
+          # Array of possible messages
+          declare -a messages=(
+            "🌟 Working on exciting new features!"
+            "📚 Learning something new today"
+            "🔧 Making improvements"
+            "🎨 Designing new solutions"
+            "🚀 Pushing the boundaries"
+            "💡 Exploring innovative ideas"
+            "🌱 Growing and evolving"
+            "⚡ Optimizing performance"
+            "🔍 Reviewing and refining"
+            "🎯 Staying focused and committed"
+          )
+          
+          # Get random message
+          MESSAGE=${messages[$RANDOM % ${#messages[@]}]}
+          
+          # Create or update README.md
+          if [ ! -f README.md ]; then
+            echo "# Daily Updates" > README.md
+            echo "" >> README.md
+          fi
+          
+          # Add new update at the top (after the title)
+          sed -i "2i\\
+          ### ${DATE}\\
+          ${MESSAGE}\\
+          \\
+          " README.md
+          
+          # Keep only last 10 updates (plus title)
+          awk '/^# Daily Updates/{p=NR+22}(NR<=p){print}' README.md > tmp && mv tmp README.md
+      
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add README.md
+          
+          # Only commit and push if there are changes
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Daily update: $(date '+%Y-%m-%d')"
+            git push
+          fi
