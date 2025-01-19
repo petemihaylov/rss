@@ -1,25 +1,31 @@
 name: Update
-
 on:
   schedule:
-    - cron: '0 2 * * *'  # Runs at 3 AM Amsterdam time (2 AM UTC)
+    - cron: '0 2 * * *'  # Runs at 2 AM UTC
   workflow_dispatch:      # Allows manual trigger
 
 jobs:
   update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write    # Explicitly set permissions
     
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           fetch-depth: 1
-          # Use PAT instead of GITHUB_TOKEN
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       
       - name: Update README
         run: |
+          # Debug information
+          echo "Current directory: $(pwd)"
+          echo "Repository contents: $(ls -la)"
+          
           # Get current date
           DATE=$(date '+%Y-%m-%d %H:%M:%S UTC')
+          echo "Current date: $DATE"
           
           # Array of possible messages
           declare -a messages=(
@@ -37,33 +43,58 @@ jobs:
           
           # Get random message
           MESSAGE=${messages[$RANDOM % ${#messages[@]}]}
+          echo "Selected message: $MESSAGE"
           
-          # Create or update README.md
+          # Ensure README.md exists
           if [ ! -f README.md ]; then
+            echo "Creating new README.md"
             echo "# Daily Updates" > README.md
             echo "" >> README.md
+          else
+            echo "README.md exists, updating content"
           fi
           
-          # Add new update at the top (after the title)
-          sed -i "2i\\
-          ### ${DATE}\\
-          ${MESSAGE}\\
-          \\
-          " README.md
+          # Create temporary file
+          tmp_file=$(mktemp)
           
-          # Keep only last 10 updates (plus title)
-          awk '/^# Daily Updates/{p=NR+22}(NR<=p){print}' README.md > tmp && mv tmp README.md
+          # Add new update while preserving existing content
+          {
+            echo "# Daily Updates"
+            echo ""
+            echo "### ${DATE}"
+            echo "${MESSAGE}"
+            echo ""
+            tail -n +2 README.md | grep -v "^# Daily Updates"
+          } > "$tmp_file"
+          
+          # Keep only last 10 updates
+          awk '/^# Daily Updates/{p=1;print;next} p{if(n++<22)print}' "$tmp_file" > README.md
+          
+          # Debug output
+          echo "Updated README content:"
+          cat README.md
       
       - name: Commit and push changes
         run: |
-          git config --global user.name '${{ secrets.GIT_USER_NAME }}'
-          git config --global user.email '${{ secrets.GIT_USER_EMAIL }}'
+          # Debug information
+          echo "Configuring git"
+          
+          git config --global user.name "${{ secrets.GIT_USER_NAME }}"
+          git config --global user.email "${{ secrets.GIT_USER_EMAIL }}"
+          
+          echo "Checking git status"
+          git status
+          
+          echo "Adding README.md"
           git add README.md
           
-          # Only commit and push if there are changes
+          # Check for changes and commit
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
+            echo "Committing changes"
             git commit -m "Daily update: $(date '+%Y-%m-%d')"
+            
+            echo "Pushing changes"
             git push
           fi
