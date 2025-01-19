@@ -45,30 +45,32 @@ jobs:
           MESSAGE=${messages[$RANDOM % ${#messages[@]}]}
           echo "Selected message: $MESSAGE"
           
-          # Ensure README.md exists
-          if [ ! -f README.md ]; then
-            echo "Creating new README.md"
-            echo "# Daily Updates" > README.md
-            echo "" >> README.md
-          else
-            echo "README.md exists, updating content"
-          fi
-          
           # Create temporary file
           tmp_file=$(mktemp)
           
-          # Add new update while preserving existing content
+          # Add new update
           {
             echo "# Daily Updates"
             echo ""
             echo "### ${DATE}"
             echo "${MESSAGE}"
             echo ""
-            tail -n +2 README.md | grep -v "^# Daily Updates"
+            
+            # If README.md exists and is not empty, append its content (excluding header)
+            if [ -s README.md ]; then
+              echo "Appending existing content from README.md"
+              sed -n '/^# Daily Updates/!p' README.md >> "$tmp_file" || true
+            else
+              echo "README.md is empty or doesn't exist, starting fresh"
+            fi
           } > "$tmp_file"
           
-          # Keep only last 10 updates
-          awk '/^# Daily Updates/{p=1;print;next} p{if(n++<22)print}' "$tmp_file" > README.md
+          # Ensure we only keep the last 10 updates
+          {
+            echo "# Daily Updates"
+            echo ""
+            sed -n '/^### /,$p' "$tmp_file" | head -n 22
+          } > README.md
           
           # Debug output
           echo "Updated README content:"
