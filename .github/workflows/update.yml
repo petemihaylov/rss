@@ -50,7 +50,7 @@ jobs:
               except FileNotFoundError:
                   current_content = "# Daily Dev News\n\n"
 
-              new_update = f"### {date_str}\n{article_content}\n\n"
+              new_update = f"{date_str}\n{article_content}\n\n"
               final_content = current_content + new_update
 
               with open('README.md', 'w') as file:
