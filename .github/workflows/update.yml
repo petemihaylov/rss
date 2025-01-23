@@ -1,8 +1,9 @@
-name: Update Dev News
+name: Fetch Dev News
+
 on:
   schedule:
-    - cron: '0 2 * * *'  # Runs at 2 AM UTC daily
-  workflow_dispatch:      # Allows manual trigger
+    - cron: '0 2 * * *'
+  workflow_dispatch:
 
 jobs:
   update:
@@ -33,13 +34,13 @@ jobs:
           import requests
           from datetime import datetime
           import pytz
-          
+
           def fetch_dev_news():
               response = requests.get("https://dev.to/api/articles?page=1&per_page=1&top=1")
               response.raise_for_status()
               article = response.json()[0]
               return f"- [{article['title']}]({article['url']}) by {article['user']['name']}"
-          
+
           def update_readme(article_content):
               date_str = datetime.now(pytz.UTC).strftime('%Y-%m-%d %H:%M:%S UTC')
               
@@ -48,19 +49,19 @@ jobs:
                       current_content = file.read()
               except FileNotFoundError:
                   current_content = "# Daily Dev News\n\n"
-              
+
               new_update = f"### {date_str}\n{article_content}\n\n"
-              
+
               header = "# Daily Dev News\n\n"
               updates = current_content.split('### ')[1:] if '### ' in current_content else []
               updates.insert(0, new_update.split('### ')[1])
               updates = updates[:10]
-              
+
               final_content = header + '### '.join(updates)
-              
+
               with open('README.md', 'w') as file:
                   file.write(final_content)
-          
+
           try:
               print("Fetching dev news...")
               article_content = fetch_dev_news()
