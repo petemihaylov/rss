@@ -1,5 +1,5 @@
 # Daily Dev News
 
-2025-01-22 02:43:25 UTC
-- [The Tech Stack for Building AI Apps in 2025](https://dev.to/copilotkit/the-tech-stack-for-building-ai-apps-in-2025-12l9) by Anmol Baranwal
+2025-01-23 02:41:29 UTC
+- [5 Must-Know Open-Source Tools for DevOps and MLOps Developers🔥🚀](https://dev.to/astrodevil/5-must-know-open-source-tools-for-devops-and-mlops-developers-29bp) by Astrodevil
 
