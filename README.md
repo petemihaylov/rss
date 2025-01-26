@@ -12,3 +12,6 @@
 2025-01-25 02:36:45 UTC
 - [You don't know it, but your open-source might be worth millions of dollars 🤑](https://dev.to/nevodavid/you-dont-know-it-but-your-open-source-might-be-worth-millions-of-dollars-47c) by Nevo David
 
+2025-01-26 02:43:05 UTC
+- [JavaScript Performance Optimization Tips for 2025.](https://dev.to/balrajola/javascript-performance-optimization-tips-for-2025-4h38) by Balraj Singh
+
