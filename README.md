@@ -15,3 +15,6 @@
 2025-01-26 02:43:05 UTC
 - [JavaScript Performance Optimization Tips for 2025.](https://dev.to/balrajola/javascript-performance-optimization-tips-for-2025-4h38) by Balraj Singh
 
+2025-01-27 02:42:48 UTC
+- [NextRaise: Streamline Your Startup’s Fundraising Journey with AI Agents](https://dev.to/sholajegede/nextraise-streamline-your-startups-fundraising-journey-with-ai-agents-3j85) by Shola Jegede
+
