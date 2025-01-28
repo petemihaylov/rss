@@ -18,3 +18,6 @@
 2025-01-27 02:42:48 UTC
 - [NextRaise: Streamline Your Startup’s Fundraising Journey with AI Agents](https://dev.to/sholajegede/nextraise-streamline-your-startups-fundraising-journey-with-ai-agents-3j85) by Shola Jegede
 
+2025-01-28 02:40:32 UTC
+- [A Step-by-Step Guide to Install DeepSeek-R1 Locally with Ollama, vLLM or Transformers](https://dev.to/nodeshiftcloud/a-step-by-step-guide-to-install-deepseek-r1-locally-with-ollama-vllm-or-transformers-44a1) by Aditi Bindal
+
