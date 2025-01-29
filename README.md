@@ -21,3 +21,6 @@
 2025-01-28 02:40:32 UTC
 - [A Step-by-Step Guide to Install DeepSeek-R1 Locally with Ollama, vLLM or Transformers](https://dev.to/nodeshiftcloud/a-step-by-step-guide-to-install-deepseek-r1-locally-with-ollama-vllm-or-transformers-44a1) by Aditi Bindal
 
+2025-01-29 02:40:06 UTC
+- [Best AI Code Generator in 2025](https://dev.to/potpie/best-ai-code-generator-in-2025-1poc) by Ayush Thakur
+
