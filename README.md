@@ -24,3 +24,6 @@
 2025-01-29 02:40:06 UTC
 - [Best AI Code Generator in 2025](https://dev.to/potpie/best-ai-code-generator-in-2025-1poc) by Ayush Thakur
 
+2025-01-30 02:39:19 UTC
+- [Run DeepSeek-R1 Locally for Free in Just 3 Minutes!](https://dev.to/pavanbelagatti/run-deepseek-r1-locally-for-free-in-just-3-minutes-1e82) by Pavan Belagatti
+
