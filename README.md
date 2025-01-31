@@ -27,3 +27,6 @@
 2025-01-30 02:39:19 UTC
 - [Run DeepSeek-R1 Locally for Free in Just 3 Minutes!](https://dev.to/pavanbelagatti/run-deepseek-r1-locally-for-free-in-just-3-minutes-1e82) by Pavan Belagatti
 
+2025-01-31 02:40:55 UTC
+- [13 top open-source tools to Supercharge web development in 2025🎉 🚀](https://dev.to/composiodev/13-top-open-source-tools-to-supercharge-web-development-in-2025-1d81) by Sunil Kumar Dash
+
