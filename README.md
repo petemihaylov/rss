@@ -39,3 +39,6 @@
 2025-02-03 02:42:03 UTC
 - [The Future of...](https://dev.to/devteam/the-future-of-4ml4) by Ben Halpern
 
+2025-02-04 02:41:12 UTC
+- [14 top developer tools to crack web3 development in 2025 🤑 💰](https://dev.to/composiodev/14-top-developer-tools-to-crack-web3-development-in-2025-5a5a) by Sunil Kumar Dash
+
