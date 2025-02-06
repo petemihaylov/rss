@@ -45,3 +45,6 @@
 2025-02-05 02:42:48 UTC
 - [14 top developer tools to crack web3 development in 2025 🤑 💰](https://dev.to/composiodev/14-top-developer-tools-to-crack-web3-development-in-2025-5a5a) by Sunil Kumar Dash
 
+2025-02-06 02:43:07 UTC
+- [The perfect Stack for building type-safe applications in 2025](https://dev.to/anmolbaranwal/the-perfect-stack-for-building-type-safe-applications-in-2025-k62) by Anmol Baranwal
+
