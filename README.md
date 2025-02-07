@@ -48,3 +48,6 @@
 2025-02-06 02:43:07 UTC
 - [The perfect Stack for building type-safe applications in 2025](https://dev.to/anmolbaranwal/the-perfect-stack-for-building-type-safe-applications-in-2025-k62) by Anmol Baranwal
 
+2025-02-07 02:44:30 UTC
+- [I built an AI Agent that creates README file for your code](https://dev.to/potpie/i-built-an-ai-agent-that-creates-readme-file-for-your-code-57l2) by Ayush Thakur
+
