@@ -51,3 +51,6 @@
 2025-02-07 02:44:30 UTC
 - [I built an AI Agent that creates README file for your code](https://dev.to/potpie/i-built-an-ai-agent-that-creates-readme-file-for-your-code-57l2) by Ayush Thakur
 
+2025-02-08 02:39:25 UTC
+- [How to Call the DeepSeek-R1 API Using Python? An In-Depth Step-by-Step Guide](https://dev.to/auden/how-to-call-the-deepseek-r1-api-using-python-an-in-depth-step-by-step-guide-311o) by Auden
+
