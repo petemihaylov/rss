@@ -57,3 +57,6 @@
 2025-02-09 02:46:03 UTC
 - [How to Call the DeepSeek-R1 API Using Python? An In-Depth Step-by-Step Guide](https://dev.to/auden/how-to-call-the-deepseek-r1-api-using-python-an-in-depth-step-by-step-guide-311o) by Auden
 
+2025-02-10 02:45:38 UTC
+- [A Simple Guide to Making Money with Mobile Development](https://dev.to/abubakersiddique761/a-simple-guide-to-making-money-with-mobile-development-14pi) by Abubaker Siddique
+
