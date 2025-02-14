@@ -69,3 +69,6 @@
 2025-02-13 02:44:16 UTC
 - [7 open-source tools you need to master AI development as a beginner 🧙‍♂️🪄](https://dev.to/johncook1122/7-open-source-tools-you-need-to-master-ai-development-as-a-beginner-ja4) by John Cook
 
+2025-02-14 02:43:31 UTC
+- [7 open-source tools you need to master AI development as a beginner 🧙‍♂️🪄](https://dev.to/johncook1122/7-open-source-tools-you-need-to-master-ai-development-as-a-beginner-ja4) by John Cook
+
