@@ -75,3 +75,6 @@
 2025-02-15 02:42:18 UTC
 - [7 open-source tools you need to master AI development as a beginner 🧙‍♂️🪄](https://dev.to/johncook1122/7-open-source-tools-you-need-to-master-ai-development-as-a-beginner-ja4) by John Cook
 
+2025-02-16 02:50:14 UTC
+- [How I reduced $10000 Monthly AWS Glue Bill to $400 using Airflow](https://dev.to/skysingh04/how-i-reduced-10000-monthly-aws-glue-bill-to-400-using-airflow-147k) by Akash Singh
+
