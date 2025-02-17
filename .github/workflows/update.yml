@@ -2,11 +2,11 @@ name: Update Dev News
 
 on:
   schedule:
-    - cron: '0 2 * * *'
+    - cron: '0 6 * * *'
   workflow_dispatch:
 
 jobs:
-  update:
+  fetch:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -18,7 +18,7 @@ jobs:
           fetch-depth: 1
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
       
-      - name: Setup Python
+      - name: Setup Action
         uses: actions/setup-python@v4
         with:
           python-version: '3.x'
@@ -28,7 +28,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests pytz
       
-      - name: Update README with Dev News
+      - name: Update the README
         run: |
           python - <<EOF
           import requests
@@ -51,7 +51,7 @@ jobs:
                   current_content = "# Daily Dev News\n\n"
 
               new_update = f"{date_str}\n{article_content}\n\n"
-              final_content = current_content + new_update
+              final_content = new_update + current_content  # Append to the top
 
               with open('README.md', 'w') as file:
                   file.write(final_content)
@@ -67,7 +67,7 @@ jobs:
               exit(1)
           EOF
       
-      - name: Commit and push changes
+      - name: Commit and Push changes
         run: |
           git config --global user.name "${{ secrets.GIT_USER_NAME }}"
           git config --global user.email "${{ secrets.GIT_USER_EMAIL }}"
