@@ -78,3 +78,6 @@
 2025-02-16 02:50:14 UTC
 - [How I reduced $10000 Monthly AWS Glue Bill to $400 using Airflow](https://dev.to/skysingh04/how-i-reduced-10000-monthly-aws-glue-bill-to-400-using-airflow-147k) by Akash Singh
 
+2025-02-17 02:49:03 UTC
+- [🔥Best alternative to HTMX](https://dev.to/hmpljs/best-alternative-to-htmx-35j7) by Anthony Max
+
