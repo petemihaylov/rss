@@ -1,3 +1,6 @@
+2025-02-24 06:23:28 UTC
+- [How web worker works with a practical example](https://dev.to/sachinchaurasiya/how-web-worker-works-with-a-practical-example-c98) by Sachin Chaurasiya
+
 2025-02-23 06:19:54 UTC
 - [Any devs actually getting a leg up using AI tools?](https://dev.to/uno-platform/any-devs-actually-getting-a-leg-up-using-ai-tools-265b) by Sasha
 
