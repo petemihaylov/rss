@@ -1,3 +1,6 @@
+2025-02-25 06:22:17 UTC
+- [11 practical tips to make code reviews easier as a developer](https://dev.to/anmolbaranwal/11-practical-tips-to-make-code-reviews-easier-as-a-developer-16kc) by Anmol Baranwal
+
 2025-02-24 06:23:28 UTC
 - [How web worker works with a practical example](https://dev.to/sachinchaurasiya/how-web-worker-works-with-a-practical-example-c98) by Sachin Chaurasiya
 
