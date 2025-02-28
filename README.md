@@ -1,3 +1,6 @@
+2025-02-28 06:22:12 UTC
+- [⚙️How to Reduce Web Application Bundle Size?🔥](https://dev.to/hmpljs/how-to-reduce-web-application-bundle-size-1gie) by Anthony Max
+
 2025-02-27 06:22:27 UTC
 - [Join Future’s First Writing Challenge!](https://dev.to/futureteam/join-futures-first-writing-challenge-4bj4) by Jess Lee
 
