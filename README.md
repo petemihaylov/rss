@@ -1,3 +1,6 @@
+2025-03-03 06:23:21 UTC
+- [🎙️We have implemented new features in HMPL to help developers make web apps smaller in size🔥](https://dev.to/hmpljs/we-have-implemented-new-features-in-hmpl-to-help-developers-make-web-apps-smaller-in-size-pef) by Anthony Max
+
 2025-03-02 06:20:53 UTC
 - [How to write solana wallet tracking telegram bot](https://dev.to/marksantiago02/how-to-write-solana-wallet-tracking-telegram-bot-3m9h) by Mark Santiago
 
