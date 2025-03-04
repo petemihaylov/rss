@@ -1,3 +1,6 @@
+2025-03-04 06:22:22 UTC
+- [Migrating from Express.js to Encore.ts for 9x Performance using Cursor](https://dev.to/encore/migrating-from-expressjs-to-encorets-for-9x-performance-using-cursor-ai-23h8) by Marcus Kohlberg
+
 2025-03-03 06:23:21 UTC
 - [🎙️We have implemented new features in HMPL to help developers make web apps smaller in size🔥](https://dev.to/hmpljs/we-have-implemented-new-features-in-hmpl-to-help-developers-make-web-apps-smaller-in-size-pef) by Anthony Max
 
