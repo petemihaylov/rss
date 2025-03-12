@@ -1,3 +1,6 @@
+2025-03-12 06:22:36 UTC
+- [Introducing Qodo Gen 1.0: Transform Your Workflow with Agentic AI](https://dev.to/qodo/introducing-qodo-gen-10-transform-your-workflow-with-agentic-ai-5a96) by Zaid Khan
+
 2025-03-11 06:22:40 UTC
 - [🎙️We've implemented new features in HMPL to help developers make web apps more secure🔥](https://dev.to/hmpljs/weve-implemented-new-features-in-hmpl-to-help-developers-make-web-apps-more-secure-3bpi) by Anthony Max
 
