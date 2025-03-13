@@ -1,3 +1,6 @@
+2025-03-13 06:22:34 UTC
+- [Join the KendoReact Free Components Challenge: $5,000 in Prizes!](https://dev.to/devteam/join-the-kendoreact-free-components-challenge-5000-in-prizes-2896) by dev.to staff
+
 2025-03-12 06:22:36 UTC
 - [Introducing Qodo Gen 1.0: Transform Your Workflow with Agentic AI](https://dev.to/qodo/introducing-qodo-gen-10-transform-your-workflow-with-agentic-ai-5a96) by Zaid Khan
 
