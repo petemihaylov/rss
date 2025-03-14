@@ -1,3 +1,6 @@
+2025-03-14 06:22:11 UTC
+- [🎙️We've implemented new features in HMPL to help developers make web apps smaller and more secure🔥](https://dev.to/hmpljs/weve-implemented-new-features-in-hmpl-to-help-developers-make-web-apps-smaller-and-more-secure-2p1p) by Anthony Max
+
 2025-03-13 06:22:34 UTC
 - [Join the KendoReact Free Components Challenge: $5,000 in Prizes!](https://dev.to/devteam/join-the-kendoreact-free-components-challenge-5000-in-prizes-2896) by dev.to staff
 
