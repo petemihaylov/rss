@@ -1,3 +1,6 @@
+2025-03-15 06:20:39 UTC
+- [Python for OSINT: Stalking the Internet Like a Pro](https://dev.to/snappytuts/python-for-osint-stalking-the-internet-like-a-pro-pa0) by Snappy Tuts
+
 2025-03-14 06:22:11 UTC
 - [🎙️We've implemented new features in HMPL to help developers make web apps smaller and more secure🔥](https://dev.to/hmpljs/weve-implemented-new-features-in-hmpl-to-help-developers-make-web-apps-smaller-and-more-secure-2p1p) by Anthony Max
 
