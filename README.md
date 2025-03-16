@@ -1,3 +1,6 @@
+2025-03-16 06:20:26 UTC
+- [Domain Driven Design](https://dev.to/lovestaco/domain-driven-design-3i2j) by Athreya aka Maneshwar
+
 2025-03-15 06:20:39 UTC
 - [Python for OSINT: Stalking the Internet Like a Pro](https://dev.to/snappytuts/python-for-osint-stalking-the-internet-like-a-pro-pa0) by Snappy Tuts
 
