@@ -1,3 +1,6 @@
+2025-03-17 06:23:51 UTC
+- [Python Malware: How Cybercriminals Use It in 2025](https://dev.to/snappytuts/python-malware-how-cybercriminals-use-it-in-2025-3e8m) by Snappy Tuts
+
 2025-03-16 06:20:26 UTC
 - [Domain Driven Design](https://dev.to/lovestaco/domain-driven-design-3i2j) by Athreya aka Maneshwar
 
