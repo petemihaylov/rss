@@ -1,3 +1,6 @@
+2025-03-18 06:23:15 UTC
+- [Python Malware: How Cybercriminals Use It in 2025](https://dev.to/snappytuts/python-malware-how-cybercriminals-use-it-in-2025-3e8m) by Snappy Tuts
+
 2025-03-17 06:23:51 UTC
 - [Python Malware: How Cybercriminals Use It in 2025](https://dev.to/snappytuts/python-malware-how-cybercriminals-use-it-in-2025-3e8m) by Snappy Tuts
 
