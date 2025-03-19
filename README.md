@@ -1,3 +1,6 @@
+2025-03-19 06:22:49 UTC
+- [How to Build an AI-Powered Open-Source Financial Manager ⚡️using Maybe Finance & CopilotKit🪁](https://dev.to/copilotkit/how-to-build-an-ai-powered-open-source-financial-manager-using-maybe-finance-copilotkit-4441) by Ekemini Samuel
+
 2025-03-18 06:23:15 UTC
 - [Python Malware: How Cybercriminals Use It in 2025](https://dev.to/snappytuts/python-malware-how-cybercriminals-use-it-in-2025-3e8m) by Snappy Tuts
 
