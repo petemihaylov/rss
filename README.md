@@ -1,3 +1,6 @@
+2025-03-20 06:22:46 UTC
+- [Product Expiry Tracker AI with KendoReact](https://dev.to/chielokacodes/product-expiry-tracker-ai-3fh9) by Chieloka Madubugwu
+
 2025-03-19 06:22:49 UTC
 - [How to Build an AI-Powered Open-Source Financial Manager ⚡️using Maybe Finance & CopilotKit🪁](https://dev.to/copilotkit/how-to-build-an-ai-powered-open-source-financial-manager-using-maybe-finance-copilotkit-4441) by Ekemini Samuel
 
