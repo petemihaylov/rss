@@ -1,3 +1,6 @@
+2025-03-22 06:20:46 UTC
+- [Python DDoS Scripts: Dead or Still Dangerous?](https://dev.to/snappytuts/python-ddos-scripts-dead-or-still-dangerous-58el) by Snappy Tuts
+
 2025-03-21 06:24:35 UTC
 - [Easily Build a UI for Your AI Agent in Minutes (LangGraph + CopilotKit)⚡️](https://dev.to/copilotkit/easily-build-a-ui-for-your-langgraph-ai-agent-in-minutes-with-copilotkit-1khj) by Bonnie
 
