@@ -1,3 +1,6 @@
+2025-03-23 06:20:55 UTC
+- [I Tried Out Qodo's New Embed Model Qodo-Embed-1🤯](https://dev.to/dev_kiran/i-tried-out-qodos-new-embed-model-qodo-embed-1-40h5) by Kiran Naragund
+
 2025-03-22 06:20:46 UTC
 - [Python DDoS Scripts: Dead or Still Dangerous?](https://dev.to/snappytuts/python-ddos-scripts-dead-or-still-dangerous-58el) by Snappy Tuts
 
