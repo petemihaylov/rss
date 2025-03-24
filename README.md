@@ -1,3 +1,6 @@
+2025-03-24 06:24:07 UTC
+- [Biometric Solutions for Fintech – 8 Reasons to Implement Them Today](https://dev.to/faceplugin/biometric-solutions-for-fintech-8-reasons-to-implement-them-today-4no4) by Faceplugin
+
 2025-03-23 06:20:55 UTC
 - [I Tried Out Qodo's New Embed Model Qodo-Embed-1🤯](https://dev.to/dev_kiran/i-tried-out-qodos-new-embed-model-qodo-embed-1-40h5) by Kiran Naragund
 
