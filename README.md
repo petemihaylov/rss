@@ -1,3 +1,6 @@
+2025-03-25 06:23:38 UTC
+- [Biometric Solutions for Fintech – 8 Reasons to Implement Them Today](https://dev.to/faceplugin/biometric-solutions-for-fintech-8-reasons-to-implement-them-today-4no4) by Faceplugin
+
 2025-03-24 06:24:07 UTC
 - [Biometric Solutions for Fintech – 8 Reasons to Implement Them Today](https://dev.to/faceplugin/biometric-solutions-for-fintech-8-reasons-to-implement-them-today-4no4) by Faceplugin
 
