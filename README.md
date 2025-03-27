@@ -1,3 +1,6 @@
+2025-03-27 06:23:09 UTC
+- [Announcing the Pulumi Deploy and Document Challenge: $3,000 in Prizes!](https://dev.to/devteam/announcing-the-pulumi-deploy-and-document-challenge-3000-in-prizes-887) by dev.to staff
+
 2025-03-26 06:23:17 UTC
 - [Biometric Solutions for Fintech – 8 Reasons to Implement Them Today](https://dev.to/faceplugin/biometric-solutions-for-fintech-8-reasons-to-implement-them-today-4no4) by Faceplugin
 
