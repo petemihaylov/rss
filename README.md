@@ -1,3 +1,6 @@
+2025-03-28 06:23:43 UTC
+- [Are you using AI only to write code? You're missing out](https://dev.to/ayush2390/are-you-using-ai-only-to-write-code-youre-missing-out-28j3) by Ayush Thakur
+
 2025-03-27 06:23:09 UTC
 - [Announcing the Pulumi Deploy and Document Challenge: $3,000 in Prizes!](https://dev.to/devteam/announcing-the-pulumi-deploy-and-document-challenge-3000-in-prizes-887) by dev.to staff
 
