@@ -61,8 +61,8 @@ jobs:
               except FileNotFoundError:
                   current_content = "# Daily Dev News\n\n"
 
-              new_update = f"{date_str}\n{article_content}\n\n"
-              final_content = new_update + current_content  # Append to the top
+              new_update = f"{article_content} {date_str}\n"
+              final_content = new_update + current_content
 
               with open('README.md', 'w') as file:
                   file.write(final_content)
