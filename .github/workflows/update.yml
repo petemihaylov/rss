@@ -26,7 +26,7 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests pytz
+          pip install requests pytz feedparser
       
       - name: Update the README
         run: |
@@ -34,12 +34,23 @@ jobs:
           import requests
           from datetime import datetime
           import pytz
-
+          import feedparser
+        
           def fetch_dev_news():
               response = requests.get("https://dev.to/api/articles?page=1&per_page=1&top=1")
               response.raise_for_status()
               article = response.json()[0]
               return f"- [{article['title']}]({article['url']}) by {article['user']['name']}"
+
+          def fetch_medium_news():
+              url = "https://medium.com/feed/tag/dotnet"
+              feed = feedparser.parse(url)
+          
+              if not feed.entries:
+                  return "No articles found."
+          
+              article = feed.entries[0]  # Latest article
+              return f"- [{article.title}]({article.link}) by {article.author}"
 
           def update_readme(article_content):
               date_str = datetime.now(pytz.UTC).strftime('%Y-%m-%d %H:%M:%S UTC')
@@ -58,7 +69,7 @@ jobs:
 
           try:
               print("Fetching dev news...")
-              article_content = fetch_dev_news()
+              article_content = fetch_medium_news()
               print("Updating README...")
               update_readme(article_content)
               print("Update completed successfully!")
