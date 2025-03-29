@@ -1,1 +1,1 @@
-
+- [Use BrowserStack App Automate with Appium UI Tests for .NET MAUI Apps](https://devblogs.microsoft.com/dotnet/browserstack-appium-dotnet-maui/) by Microsoft DevBlogs
