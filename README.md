@@ -1,1 +1,1 @@
-- [Modernizing push notification API for Teams](https://devblogs.microsoft.com/dotnet/modernizing-push-notification-api-for-teams/) by Microsoft DevBlogs
+- [Build a Model Context Protocol (MCP) server in C#](https://devblogs.microsoft.com/dotnet/build-a-model-context-protocol-mcp-server-in-csharp/) by Microsoft DevBlogs
