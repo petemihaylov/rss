@@ -1,1 +1,1 @@
-- [Build a Model Context Protocol (MCP) server in C#](https://devblogs.microsoft.com/dotnet/build-a-model-context-protocol-mcp-server-in-csharp/) by Microsoft DevBlogs
+- [.NET Aspire 9.2 is Now Available with New Ways to Deploy](https://devblogs.microsoft.com/dotnet/dotnet-aspire-92-is-now-available-with-new-ways-to-deploy/) by Microsoft DevBlogs
