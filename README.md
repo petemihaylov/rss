@@ -1,1 +1,1 @@
-- [.NET Aspire 9.2 is Now Available with New Ways to Deploy](https://devblogs.microsoft.com/dotnet/dotnet-aspire-92-is-now-available-with-new-ways-to-deploy/) by Microsoft DevBlogs
+- [.NET 10 Preview 3 is now available!](https://devblogs.microsoft.com/dotnet/dotnet-10-preview-3/) by Microsoft DevBlogs
