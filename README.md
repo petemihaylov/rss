@@ -1,1 +1,1 @@
-- [.NET 10 Preview 3 is now available!](https://devblogs.microsoft.com/dotnet/dotnet-10-preview-3/) by Microsoft DevBlogs
+- [Join the .NET & C# Teams at Microsoft Build 2025](https://devblogs.microsoft.com/dotnet/join-us-at-build-2025/) by Microsoft DevBlogs
