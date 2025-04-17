@@ -1,1 +1,1 @@
-- [Join the .NET & C# Teams at Microsoft Build 2025](https://devblogs.microsoft.com/dotnet/join-us-at-build-2025/) by Microsoft DevBlogs
+- [Build MCP Remote Servers with Azure Functions](https://devblogs.microsoft.com/dotnet/build-mcp-remote-servers-with-azure-functions/) by Microsoft DevBlogs
