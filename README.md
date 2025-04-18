@@ -1,1 +1,1 @@
-- [Build MCP Remote Servers with Azure Functions](https://devblogs.microsoft.com/dotnet/build-mcp-remote-servers-with-azure-functions/) by Microsoft DevBlogs
+- [Preview 2 of the .NET AI Template Now Available](https://devblogs.microsoft.com/dotnet/announcing-dotnet-ai-template-preview2/) by Microsoft DevBlogs
