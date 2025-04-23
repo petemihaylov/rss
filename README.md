@@ -1,1 +1,1 @@
-- [Preview 2 of the .NET AI Template Now Available](https://devblogs.microsoft.com/dotnet/announcing-dotnet-ai-template-preview2/) by Microsoft DevBlogs
+- [Building Real‑Time iOS Apps with SignalR: Introducing the Official Swift Client (Public Preview)](https://devblogs.microsoft.com/dotnet/building-real%e2%80%91time-ios-apps-with-signalr-introducing-the-official-swift-client-public-preview/) by Microsoft DevBlogs
