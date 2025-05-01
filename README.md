@@ -1,1 +1,1 @@
-- [Building Real‑Time iOS Apps with SignalR: Introducing the Official Swift Client (Public Preview)](https://devblogs.microsoft.com/dotnet/building-real%e2%80%91time-ios-apps-with-signalr-introducing-the-official-swift-client-public-preview/) by Microsoft DevBlogs
+- [Packaging and Publishing a .NET MAUI Library with GitHub Actions](https://devblogs.microsoft.com/dotnet/dotnet-maui-libraries-github-actions/) by Microsoft DevBlogs
