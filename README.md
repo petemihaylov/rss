@@ -1,1 +1,1 @@
-- [Packaging and Publishing a .NET MAUI Library with GitHub Actions](https://devblogs.microsoft.com/dotnet/dotnet-maui-libraries-github-actions/) by Microsoft DevBlogs
+- [Why we built our startup in C#](https://devblogs.microsoft.com/dotnet/why-we-built-our-startup-in-csharp/) by Microsoft DevBlogs
