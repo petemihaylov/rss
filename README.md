@@ -1,1 +1,1 @@
-- [C# 14 – Exploring extension members](https://devblogs.microsoft.com/dotnet/csharp-exploring-extension-members/) by Microsoft DevBlogs
+- [.NET and .NET Framework May 2025 servicing releases updates](https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-may-2025-servicing-updates/) by Microsoft DevBlogs
