@@ -1,1 +1,1 @@
-- [.NET and .NET Framework May 2025 servicing releases updates](https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-may-2025-servicing-updates/) by Microsoft DevBlogs
+- [Evaluating content safety in your .NET AI applications](https://devblogs.microsoft.com/dotnet/evaluating-ai-content-safety/) by Microsoft DevBlogs
