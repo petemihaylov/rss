@@ -1,1 +1,1 @@
-- [Evaluating content safety in your .NET AI applications](https://devblogs.microsoft.com/dotnet/evaluating-ai-content-safety/) by Microsoft DevBlogs
+- [.NET Aspire 9.3 is here and enhanced with GitHub Copilot!](https://devblogs.microsoft.com/dotnet/introducing-dotnet-aspire-93/) by Microsoft DevBlogs
