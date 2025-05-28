@@ -1,1 +1,1 @@
-- [AI and Vector Data Extensions are now Generally Available (GA)](https://devblogs.microsoft.com/dotnet/ai-vector-data-dotnet-extensions-ga/) by Microsoft DevBlogs
+- [Announcing dotnet run app.cs – A simpler way to start with C# and .NET 10](https://devblogs.microsoft.com/dotnet/announcing-dotnet-run-app/) by Microsoft DevBlogs
