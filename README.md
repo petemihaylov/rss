@@ -1,1 +1,1 @@
-- [Announcing dotnet run app.cs – A simpler way to start with C# and .NET 10](https://devblogs.microsoft.com/dotnet/announcing-dotnet-run-app/) by Microsoft DevBlogs
+- [Fine-tune the volume of logs your app produces](https://devblogs.microsoft.com/dotnet/finetune-the-volume-of-logs-your-app-produces/) by Microsoft DevBlogs
