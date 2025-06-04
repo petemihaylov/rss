@@ -1,1 +1,1 @@
-- [Fine-tune the volume of logs your app produces](https://devblogs.microsoft.com/dotnet/finetune-the-volume-of-logs-your-app-produces/) by Microsoft DevBlogs
+- [Using AI Foundry with .NET MAUI](https://devblogs.microsoft.com/dotnet/using-ai-foundry-with-dotnet-maui/) by Microsoft DevBlogs
