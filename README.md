@@ -1,1 +1,1 @@
-- [Using AI Foundry with .NET MAUI](https://devblogs.microsoft.com/dotnet/using-ai-foundry-with-dotnet-maui/) by Microsoft DevBlogs
+- [Catch Up on Microsoft Build 2025: Essential Sessions for .NET Developers](https://devblogs.microsoft.com/dotnet/catching-up-on-microsoft-build-2025-essential-sessions-for-dotnet-developers/) by Microsoft DevBlogs
