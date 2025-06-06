@@ -1,1 +1,1 @@
-- [Catch Up on Microsoft Build 2025: Essential Sessions for .NET Developers](https://devblogs.microsoft.com/dotnet/catching-up-on-microsoft-build-2025-essential-sessions-for-dotnet-developers/) by Microsoft DevBlogs
+- [Emit logs on-demand with log buffering](https://devblogs.microsoft.com/dotnet/emit-logs-on-demand-with-log-buffering/) by Microsoft DevBlogs
