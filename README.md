@@ -1,1 +1,1 @@
-- [Emit logs on-demand with log buffering](https://devblogs.microsoft.com/dotnet/emit-logs-on-demand-with-log-buffering/) by Microsoft DevBlogs
+- [.NET and .NET Framework June 2025 servicing releases updates](https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-june-2025-servicing-updates/) by Microsoft DevBlogs
