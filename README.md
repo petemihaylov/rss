@@ -1,1 +1,1 @@
-- [.NET and .NET Framework June 2025 servicing releases updates](https://devblogs.microsoft.com/dotnet/dotnet-and-dotnet-framework-june-2025-servicing-updates/) by Microsoft DevBlogs
+- [Multimodal Voice Intelligence with .NET MAUI](https://devblogs.microsoft.com/dotnet/multimodal-voice-intelligence-with-dotnet-maui/) by Microsoft DevBlogs
