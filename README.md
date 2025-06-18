@@ -1,1 +1,1 @@
-- [Improve Your Productivity with New GitHub Copilot Features for .NET!](https://devblogs.microsoft.com/dotnet/improve-productivity-with-github-copilot-dotnet/) by Microsoft DevBlogs
+- [Multimodal Vision Intelligence with .NET MAUI](https://devblogs.microsoft.com/dotnet/multimodal-vision-intelligence-with-dotnet-maui/) by Microsoft DevBlogs
