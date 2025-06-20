@@ -19,7 +19,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install feedparser beautifulsoup4 pytz
+        run: pip install requests feedparser beautifulsoup4 pytz
 
       - name: Update the README
         run: |
