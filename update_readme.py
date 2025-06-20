@@ -19,7 +19,7 @@ def fetch_microsoft_devblogs():
     if not feed.entries:
         return None
     article = feed.entries[0]
-    img_url = 'https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2019/07/dotNET_bot.png'
+    img_url = 'https://sam-solutions.com/wp-content/uploads/Net-vs-C-cover@2x.webp'
     return {
         'title': article.title,
         'link': article.link,
