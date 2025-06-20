@@ -1,121 +1,123 @@
-name: Fetch Dotnet Articles
+- name: Update the README
+  run: |
+    python - <<EOF
+    import requests
+    import feedparser
+    import random
+    from datetime import datetime
+    import pytz
+    from bs4 import BeautifulSoup
+    import re
 
-on:
-  schedule:
-    - cron: '0 16 * * *'  # Runs daily at 16:00 UTC
-  workflow_dispatch:
+    TOPICS = [".NET", "C#", "Azure", "Blazor", "Entity Framework", "ASP.NET Core", "Microservices"]
 
-jobs:
-  fetch:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 1
-          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-      
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.x'
-      
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests pytz feedparser beautifulsoup4
-      
-      - name: Update the README
-        run: |
-          python - <<EOF
-          import requests
-          import feedparser
-          import random
-          from datetime import datetime
-          import pytz
-          from bs4 import BeautifulSoup
+    GRID_START = "<!-- ARTICLES-GRID-START -->"
+    GRID_END = "<!-- ARTICLES-GRID-END -->"
 
-          # List of topics
-          TOPICS = [".NET", "C#", "Azure", "Blazor", "Entity Framework", "ASP.NET Core", "Microservices"]
+    def get_random_topic():
+        return random.choice(TOPICS)
 
-          def get_random_topic():
-              return random.choice(TOPICS)
+    def fetch_microsoft_devblogs():
+        url = "https://devblogs.microsoft.com/dotnet/feed/"
+        feed = feedparser.parse(url)
+        if not feed.entries:
+            return None
+        article = feed.entries[0]
+        # Try to get image from the content, else use placeholder
+        img_url = "https://devblogs.microsoft.com/dotnet/wp-content/uploads/sites/10/2019/07/dotNET_bot.png"
+        if hasattr(article, 'media_content') and article.media_content:
+            img_url = article.media_content[0]['url']
+        return {
+            "title": article.title,
+            "link": article.link,
+            "img": img_url,
+            "date": datetime.now(pytz.UTC).strftime('%Y-%m-%d %H:%M UTC')
+        }
 
-          def fetch_microsoft_devblogs():
-              """Fetches the latest article from Microsoft DevBlogs"""
-              url = "https://devblogs.microsoft.com/dotnet/feed/"
-              feed = feedparser.parse(url)
+    def fetch_medium_search(topic):
+        search_query = topic.replace(" ", "+")
+        url = f"https://medium.com/search?q={search_query}"
+        headers = {"User-Agent": "Mozilla/5.0"}
+        response = requests.get(url, headers=headers)
+        if response.status_code != 200:
+            return None
+        soup = BeautifulSoup(response.text, "html.parser")
+        articles = soup.select("div.postArticle")
+        if not articles:
+            return None
+        # First article
+        article_block = articles[0]
+        title_tag = article_block.select_one("h3")
+        link_tag = article_block.select_one("a")
+        img_tag = article_block.select_one("img")
+        title = title_tag.text.strip() if title_tag else "Medium Article"
+        link = link_tag['href'].split("?")[0] if link_tag else url
+        img = img_tag['src'] if img_tag else "https://cdn-icons-png.flaticon.com/512/5968/5968885.png"
+        return {
+            "title": title,
+            "link": link,
+            "img": img,
+            "date": datetime.now(pytz.UTC).strftime('%Y-%m-%d %H:%M UTC')
+        }
 
-              if not feed.entries:
-                  return None
+    def get_latest_article():
+        return fetch_microsoft_devblogs() or fetch_medium_search(get_random_topic())
 
-              article = feed.entries[0]
-              return f"- [{article.title}]({article.link}) by Microsoft DevBlogs"
+    def render_article_cell(article):
+        return f'''
+        <div style="flex:1 0 200px;max-width:250px;min-width:180px;background:#fafafa;border-radius:8px;padding:10px;margin:8px;box-shadow:0 1px 4px rgba(0,0,0,0.06);display:flex;flex-direction:column;align-items:center;">
+            <a href="{article["link"]}" target="_blank" style="text-decoration:none;">
+                <img src="{article["img"]}" alt="{article["title"]}" style="width:100px;height:100px;object-fit:cover;border-radius:6px;margin-bottom:10px;">
+                <div style="font-weight:bold;text-align:center;margin-bottom:6px;">{article["title"]}</div>
+            </a>
+            <div style="font-size:12px;color:#888;text-align:center;">{article["date"]}</div>
+        </div>
+        '''
 
-          def fetch_medium_search(topic):
-              """Fetches an article from Medium based on the topic"""
-              search_query = topic.replace(" ", "+")
-              url = f"https://medium.com/search?q={search_query}"
-              headers = {"User-Agent": "Mozilla/5.0"}
-              response = requests.get(url, headers=headers)
+    def update_readme():
+        article = get_latest_article()
+        if not article:
+            print("No article found.")
+            return
+        try:
+            with open("README.md", "r", encoding="utf-8") as f:
+                content = f.read()
+        except FileNotFoundError:
+            content = ""
 
-              if response.status_code != 200:
-                  return None
+        # Find the articles grid
+        grid_match = re.search(f"{GRID_START}(.*?){GRID_END}", content, re.DOTALL)
+        if grid_match:
+            grid_html = grid_match.group(1).strip()
+        else:
+            grid_html = ""
 
-              soup = BeautifulSoup(response.text, "html.parser")
-              articles = soup.select("h2")  # Find article titles
+        # Add new article at the beginning, then existing
+        new_grid_html = render_article_cell(article) + "\n" + grid_html
 
-              if not articles:
-                  return None
+        # Wrap in flexbox grid
+        grid_full_html = f'''
+{GRID_START}
+<div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-start;">
+{new_grid_html}
+</div>
+{GRID_END}
+'''
 
-              title = articles[0].text
-              link_tag = soup.select("a[href*='/@']")
+        # Replace or insert grid in README
+        if grid_match:
+            updated_content = re.sub(f"{GRID_START}.*?{GRID_END}", grid_full_html, content, flags=re.DOTALL)
+        else:
+            updated_content = content + "\n" + grid_full_html
 
-              if link_tag:
-                  link = "https://medium.com" + link_tag[0]["href"]
-              else:
-                  link = "No link found."
+        with open("README.md", "w", encoding="utf-8") as f:
+            f.write(updated_content)
+        print("README updated successfully.")
 
-              return f"- [{title}]({link}) from Medium"
-
-          def update_readme():
-              """Updates the README with fresh content"""
-              
-              topic = get_random_topic()
-              print(f"Selected topic: {topic}")
-
-              article = fetch_microsoft_devblogs() or fetch_medium_search(topic) or "No articles found."
-
-              date_str = datetime.now(pytz.UTC).strftime('%Y-%m-%d %H:%M:%S UTC')
-
-              new_content = f"{article}\n"
-
-              with open("README.md", "w") as file:
-                  file.write(new_content)
-
-              print("README updated successfully.")
-
-          if __name__ == "__main__":
-              try:
-                  update_readme()
-              except Exception as e:
-                  print(f"Error occurred: {str(e)}")
-                  exit(1)
-          EOF
-      
-      - name: Commit and Push changes
-        run: |
-          git config --global user.name "${{ secrets.GIT_USER_NAME }}"
-          git config --global user.email "${{ secrets.GIT_USER_EMAIL }}"
-          
-          git add README.md
-          
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "Daily dev news update: $(date '+%Y-%m-%d')"
-            git push
-          fi
+    if __name__ == "__main__":
+        try:
+            update_readme()
+        except Exception as e:
+            print(f"Error occurred: {str(e)}")
+            exit(1)
+    EOF
