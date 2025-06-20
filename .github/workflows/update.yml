@@ -1,36 +1,39 @@
 name: Update README with latest article
 
 on:
-  schedule:
-    - cron: '0 * * * *' # every hour
   workflow_dispatch:
+  schedule:
+    - cron: '0 * * * *'  # every hour
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout the repo
-        uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
           python-version: '3.x'
 
       - name: Install dependencies
-        run: pip install feedparser beautifulsoup4 pytz requests
+        run: pip install feedparser beautifulsoup4 pytz
 
-      - name: Run update script
+      - name: Update the README
         run: |
-          python3 script.py
+          python3 update_readme.py  # or inline script like in your case
 
-      - name: Commit and push if changed
+      - name: Commit and Push changes
+        env:
+          TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          GIT_USER_NAME: ${{ secrets.GIT_USER_NAME }}
+          GIT_USER_EMAIL: ${{ secrets.GIT_USER_EMAIL }}
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet README.md; then
-            echo "No changes to commit."
-          else
-            git add README.md
-            git commit -m "chore: update README with latest article"
-            git push
+          git config --global user.name "$GIT_USER_NAME"
+          git config --global user.email "$GIT_USER_EMAIL"
+
+          git add README.md
+          git commit -m "chore: update README with latest article" || echo "No changes to commit"
+          git push https://$TOKEN@github.com/${{ github.repository }} HEAD:main
