@@ -57,6 +57,15 @@ def get_latest_article():
 def render_article_cell_md(article):
     return f"""| [![{article['title']}]({article['img']})]({article['link']}) | **[{article['title']}]({article['link']})**<br/>🕒 {article['date']} |"""
 
+# Extract links from old rows
+def extract_links(rows):
+    links = []
+    for row in rows:
+        match = re.search(r'\[!\[.*\]\((.*?)\)\]\((.*?)\)', row)
+        if match:
+            links.append(match.group(2))
+    return links
+        
 def update_readme():
     article = get_latest_article()
     if not article:
@@ -72,9 +81,10 @@ def update_readme():
     grid_match = re.search(f'{GRID_START}(.*?){GRID_END}', content, re.DOTALL)
     old_grid = grid_match.group(1).strip() if grid_match else ''
     old_rows = old_grid.split('\n')[2:] if old_grid.startswith("| Article") else []  # skip header lines
-
-    new_row = render_article_cell_md(article)
-    if new_row in old_rows:
+    
+    old_links = extract_links(old_rows)
+    
+    if article['link'] in old_links:
         print("Article already exists, not adding duplicate.")
         return
 
